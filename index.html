@@ -1,75 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071b2b">
-<meta name="description" content="VicTec builds AI-powered ZIMSEC learning assistants for O Level and A Level students in Zimbabwe.">
-<title>VicTec | AI Education Solutions</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#071b2b;--navy2:#102c40;--green:#19b77a;--green-light:#e8f8f1;--ink:#142b3a;--muted:#667987;--line:#e3eaee;--bg:#f6f9fa;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif}a{text-decoration:none;color:inherit}.wrap{width:min(1140px,90%);margin:auto}
-header{height:76px;background:var(--navy);color:#fff;display:flex;align-items:center;position:sticky;top:0;z-index:20;border-bottom:1px solid #ffffff14}
-.nav{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font:800 23px Manrope;letter-spacing:-1px}.brand-mark{width:38px;height:38px;border-radius:12px;background:var(--green);color:#05281c;display:grid;place-items:center;font-weight:900}.brand em{font-style:normal;color:#59dba6}.navlinks{display:flex;align-items:center;gap:27px;font-size:13px;color:#d0dce3}.navlinks a:hover{color:#65dfae}.nav-cta{background:var(--green);color:#06271c;padding:11px 16px;border-radius:9px;font-weight:700}.menu{display:none;background:transparent;color:white;font-size:24px}
-.hero{background:radial-gradient(circle at 80% 30%,#164b4b 0,transparent 31%),linear-gradient(120deg,#071b2b,#0d2b40);color:white;padding:92px 0 85px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid #ffffff26;border-radius:30px;background:#ffffff0d;color:#8ce8bd;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}.pulse{height:7px;width:7px;border-radius:50%;background:#55dda5}.hero h1{font:800 clamp(39px,5.3vw,65px)/1.07 Manrope;letter-spacing:-2.7px;margin:23px 0 18px;max-width:700px}.hero h1 span{color:#5be0a9}.hero p{max-width:590px;color:#c3d2dc;line-height:1.75;font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:10px;font-weight:700;font-size:13px}.primary{background:var(--green);color:#06271c}.secondary{border:1px solid #ffffff40;color:#fff;background:#ffffff0b}.hero-foot{font-size:11px;color:#9fb3bf;margin-top:20px}.mockup{background:#fff;color:var(--ink);border-radius:20px;padding:22px;box-shadow:0 30px 70px #0005;transform:rotate(1deg);max-width:440px;margin:auto}.mock-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:15px}.mock-brand{display:flex;align-items:center;gap:10px;font-weight:700}.avatar{height:38px;width:38px;border-radius:12px;background:var(--green-light);display:grid;place-items:center;color:#078657;font-weight:900}.status{font-size:10px;color:#078657;background:var(--green-light);padding:6px 9px;border-radius:20px}.mock-label{font-size:10px;color:#80909a;margin:18px 0 8px}.bubble{font-size:12px;line-height:1.55;padding:12px 13px;border-radius:12px;margin:9px 0;max-width:90%}.bubble.ai{background:#f0f4f6}.bubble.user{background:#ddf7e9;margin-left:auto}.mock-bottom{background:#f6f8f9;border-radius:9px;padding:12px;color:#9ba8b0;font-size:11px;margin-top:17px}
-section{padding:76px 0}.section-title{text-align:center;max-width:680px;margin:0 auto 38px}.kicker{font-size:11px;color:#0a9b65;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}.section-title h2{font:800 34px Manrope;letter-spacing:-1.3px;margin:10px 0}.section-title p{color:var(--muted);line-height:1.7;margin:0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{background:white;border:1px solid var(--line);border-radius:15px;padding:23px}.ico{width:44px;height:44px;border-radius:13px;background:var(--green-light);display:grid;place-items:center;font-size:21px}.service h3{font:700 16px Manrope;margin:17px 0 8px}.service p{font-size:13px;color:var(--muted);line-height:1.65;margin:0}
-.about{background:#edf3f5}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.about-panel{background:var(--navy);border-radius:20px;padding:30px;color:#fff;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}.about-panel .big{font:800 43px Manrope;color:#62dfa9;letter-spacing:-2px}.about-panel p{color:#c0d1da;line-height:1.6}.about-copy h2{font:800 33px Manrope;letter-spacing:-1px;margin:10px 0}.about-copy p{color:var(--muted);line-height:1.75;font-size:14px}.tick{display:flex;gap:10px;align-items:flex-start;margin:14px 0;font-size:13px}.tick b{color:#0b9a65}
-.level-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.level{background:#fff;border:1px solid var(--line);border-radius:15px;padding:24px}.level small{color:#0a9b65;font-size:10px;font-weight:800;letter-spacing:1px}.level h3{font:800 23px Manrope;margin:8px 0}.level p{color:var(--muted);font-size:13px;line-height:1.6}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.tags span{background:#f0f5f6;border-radius:20px;padding:7px 10px;font-size:11px;color:#526570}
-.contact{background:var(--navy);color:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:start}.contact h2{font:800 35px Manrope;letter-spacing:-1px;margin:10px 0}.contact p{color:#bdcdd6;line-height:1.7;font-size:14px}.contact-details{display:grid;gap:13px;margin-top:25px}.contact-item{display:flex;gap:12px;align-items:center;color:#e5edf1;font-size:13px}.contact-item span:first-child{width:37px;height:37px;border-radius:11px;background:#ffffff12;display:grid;place-items:center}.contact-card{background:#fff;color:var(--ink);padding:25px;border-radius:17px}.contact-card h3{font:700 19px Manrope;margin:0 0 16px}.field{margin:12px 0}.field label{display:block;font-size:11px;font-weight:700;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:9px;outline:none;font:13px "DM Sans"}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--green)}.field textarea{min-height:90px;resize:vertical}.send{width:100%;border:0;cursor:pointer}.form-note{font-size:10px;color:var(--muted);line-height:1.5;margin-top:10px}
-footer{background:#04131e;color:#9dafba;padding:25px 0;font-size:11px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.foot strong{color:#fff}.wa-float{position:fixed;right:22px;bottom:22px;z-index:15;background:#20c879;color:#06291d;padding:13px 17px;border-radius:30px;font-size:12px;font-weight:800;box-shadow:0 8px 25px #0003}
-@media(max-width:800px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:65px 0}.hero h1{font-size:45px}.mockup{margin-top:15px}.services{grid-template-columns:1fr 1fr}.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:var(--navy);padding:20px;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.menu{display:block}.level-grid{grid-template-columns:1fr}.about-grid{gap:25px}}
-@media(max-width:520px){.services{grid-template-columns:1fr}.hero h1{font-size:39px}.section-title h2,.about-copy h2,.contact h2{font-size:29px}.hero-grid{gap:25px}.wrap{width:88%}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Victec builds modern software, websites and intelligent digital solutions for ambitious businesses.">
+  <meta name="theme-color" content="#080d1b">
+  <title>Victec | Technology. Built for What's Next.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header><div class="wrap nav">
-<a class="brand" href="#home"><span class="brand-mark">V</span><span>Vic<em>Tec</em></span></a>
-<nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#services">What We Do</a><a href="#about">About VicTec</a><a href="#learning">Learning Levels</a><a href="#contact">Contact</a></nav>
-<div style="display:flex;gap:12px;align-items:center"><a class="nav-cta" href="#contact">Work with us</a><button class="menu" id="menu" aria-label="Open menu">☰</button></div>
-</div></header>
-<main>
-<section class="hero" id="home"><div class="wrap hero-grid">
-<div><div class="eyebrow"><span class="pulse"></span> ZIMBABWEAN EDUCATION TECHNOLOGY</div>
-<h1>Smarter learning.<br><span>Powered by AI.</span></h1>
-<p>VicTec builds intelligent learning assistants that help Zimbabwean students understand their subjects, practise with purpose and prepare for ZIMSEC O Level and A Level examinations — through the website and WhatsApp.</p>
-<div class="actions"><a class="btn primary" href="#contact">Enquire about VicTec ↗</a><a class="btn secondary" href="https://wa.me/263786610390?text=Hello%20VicTec%2C%20I%27d%20like%20to%20learn%20more." target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-<div class="hero-foot">An education technology initiative by VicTec · Zimbabwe</div></div>
-<div class="mockup"><div class="mock-head"><div class="mock-brand"><div class="avatar">V</div><div>VicTec AI Tutor<br><small style="font-size:10px;color:#7b8c96;font-weight:400">ZIMSEC learning assistant</small></div></div><span class="status">● Ready to help</span></div>
-<div class="mock-label">SAMPLE LEARNING CONVERSATION</div><div class="bubble ai">Welcome! Which topic would you like to understand today?</div><div class="bubble user">Can you explain Newton's second law?</div><div class="bubble ai">Of course. Newton's second law explains how the resultant force on an object relates to its mass and acceleration. Let's work through it step by step.</div><div class="mock-bottom">Ask a question, practise a topic or revise for ZIMSEC…</div></div>
-</div></section>
-<section id="services"><div class="wrap"><div class="section-title"><div class="kicker">What VicTec does</div><h2>Learning support, made more accessible</h2><p>We are building practical AI-powered tools around the way students learn, revise and prepare for examinations.</p></div>
-<div class="services">
-<article class="service"><div class="ico">🤖</div><h3>AI Learning Assistants</h3><p>Interactive subject assistants that explain concepts in clear steps and respond to student questions.</p></article>
-<article class="service"><div class="ico">📚</div><h3>Syllabus-Based Learning</h3><p>Organised learning support for ZIMSEC O Level and A Level topics, subjects and learning objectives.</p></article>
-<article class="service"><div class="ico">📝</div><h3>Quiz & Practice Tools</h3><p>Topic quizzes, practice questions and feedback to help learners check their understanding.</p></article>
-<article class="service"><div class="ico">📄</div><h3>Past-Paper Practice</h3><p>Guided practice using permitted past-paper material, with explanations of methods and answers.</p></article>
-<article class="service"><div class="ico">📈</div><h3>Learning Progress</h3><p>Tools to help learners track completed topics, practice activity and areas that need more attention.</p></article>
-<article class="service"><div class="ico">💬</div><h3>WhatsApp Learning</h3><p>A familiar way to reach learning support, alongside the VicTec website experience.</p></article>
-</div></div></section>
-<section class="about" id="about"><div class="wrap about-grid">
-<div class="about-panel"><div><div class="kicker" style="color:#6de0b1">OUR PURPOSE</div><div class="big">Learn.<br>Practise.<br>Progress.</div></div><p>Making helpful learning technology easier for students to access, wherever they are.</p></div>
-<div class="about-copy"><div class="kicker">About the company</div><h2>Introducing VicTec</h2><p>VicTec is a Zimbabwe-focused education technology initiative developing AI-powered assistants for secondary school learning. Our goal is to make personalised explanations, structured practice and revision support more accessible to students preparing for ZIMSEC examinations.</p><p>Students will be able to access VicTec through the website and WhatsApp, with learning support designed for both O Level and A Level.</p>
-<div class="tick"><b>✓</b><span>Designed around Zimbabwean learners and ZIMSEC study needs.</span></div><div class="tick"><b>✓</b><span>Focused on understanding concepts, not just memorising answers.</span></div><div class="tick"><b>✓</b><span>Built to make digital learning simple and accessible.</span></div></div>
-</div></section>
-<section id="learning"><div class="wrap"><div class="section-title"><div class="kicker">Who we support</div><h2>O Level and A Level learning</h2><p>VicTec is being developed to support learners across both ZIMSEC secondary school pathways.</p></div>
-<div class="level-grid"><article class="level"><small>ORDINARY LEVEL</small><h3>ZIMSEC O Level</h3><p>Build subject understanding, revise syllabus topics and practise exam-style questions with guided explanations.</p><div class="tags"><span>Mathematics</span><span>English</span><span>Biology</span><span>Chemistry</span><span>Physics</span><span>Geography</span><span>History</span><span>Accounting</span></div></article>
-<article class="level"><small>ADVANCED LEVEL</small><h3>ZIMSEC A Level</h3><p>Explore advanced concepts, strengthen problem-solving and prepare for structured examination questions.</p><div class="tags"><span>Mathematics</span><span>Physics</span><span>Chemistry</span><span>Biology</span><span>Geography</span><span>History</span><span>Economics</span><span>Accounting</span></div></article></div>
-<p style="text-align:center;color:#82919a;font-size:11px;margin-top:17px">Subject availability and syllabus coverage will expand as VicTec develops. VicTec is an independent learning initiative and is not affiliated with ZIMSEC.</p>
-</div></section>
-<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="kicker" style="color:#69dfb0">Get in touch</div><h2>Let's make learning smarter.</h2><p>Interested in VicTec, partnering with us, or finding out when the learning assistant will be available? Contact the VicTec team.</p>
-<div class="contact-details"><a class="contact-item" href="mailto:victorychikonye@gmail.com"><span>✉</span><span>victorychikonye@gmail.com</span></a><a class="contact-item" href="https://wa.me/263786610390" target="_blank" rel="noopener"><span>☏</span><span>+263 78 661 0390</span></a><div class="contact-item"><span>⌖</span><span>Zimbabwe</span></div></div></div>
-<div class="contact-card"><h3>Send an enquiry</h3><form id="contactForm"><div class="field"><label for="name">Your name</label><input id="name" required placeholder="Enter your name"></div><div class="field"><label for="email">Email address</label><input id="email" type="email" required placeholder="you@example.com"></div><div class="field"><label for="interest">I'm interested in</label><select id="interest"><option>VicTec AI learning assistant</option><option>School or organisation partnership</option><option>O Level learning support</option><option>A Level learning support</option><option>General enquiry</option></select></div><div class="field"><label for="message">Message</label><textarea id="message" required placeholder="How can we help?"></textarea></div><button class="btn primary send" type="submit">Send enquiry by email ↗</button><div class="form-note">Your email app will open with your enquiry addressed to VicTec. No information is stored on this website.</div></form></div>
-</div></section>
-</main>
-<footer><div class="wrap foot"><div><strong>VicTec</strong> · AI-powered ZIMSEC learning support</div><div>© <span id="year"></span> VicTec. Zimbabwe.</div><div><a href="mailto:victorychikonye@gmail.com">victorychikonye@gmail.com</a></div></div></footer>
-<a class="wa-float" href="https://wa.me/263786610390?text=Hello%20VicTec%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp VicTec ↗</a>
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('menu').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('open'));
-document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
-document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim(),email=document.getElementById('email').value.trim(),interest=document.getElementById('interest').value,message=document.getElementById('message').value.trim();const subject=encodeURIComponent('VicTec enquiry: '+interest);const body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nInterest: '+interest+'\n\nMessage:\n'+message);window.location.href='mailto:victorychikonye@gmail.com?subject='+subject+'&body='+body;});
-</script>
-</body></html>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Victec home"><span class="brand-mark">V</span><span>VIC<span class="accent">TEC</span><i>.</i></span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="#services">Services</a><a href="#about">About</a><a href="#work">Our approach</a>
+      <a class="nav-cta" href="#contact">Let's talk <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> TECHNOLOGY & SOFTWARE DEVELOPMENT</div>
+        <h1>We build what<br>comes <span class="gradient-text">next.</span></h1>
+        <p class="hero-lead">Digital ideas deserve exceptional execution. Victec turns ambitious concepts into thoughtful software, powerful websites and practical technology solutions.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">Start a project <span>↗</span></a>
+          <a class="text-link" href="#services">Explore what we do <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="note-line"></span> BUILT WITH PURPOSE. DESIGNED FOR PROGRESS.</div>
+      </div>
+      <div class="hero-visual" aria-label="Abstract digital technology illustration">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+        <div class="core"><div class="core-inner">V<span>.</span></div></div>
+        <div class="float-card card-top"><span class="mini-icon">✳</span><div><b>Ideas to impact</b><small>Make it meaningful</small></div></div>
+        <div class="float-card card-bottom"><span class="status-dot"></span><div><b>Future-focused</b><small>Always moving forward</small></div></div>
+        <div class="visual-caption">FIG. 01 — THE VICtec MINDSET</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Our focus areas"><div class="ticker-track">
+      <span>SOFTWARE DEVELOPMENT</span><b>✳</b><span>WEB EXPERIENCES</span><b>✳</b><span>DIGITAL INNOVATION</span><b>✳</b><span>SMART SOLUTIONS</span><b>✳</b>
+      <span>SOFTWARE DEVELOPMENT</span><b>✳</b><span>WEB EXPERIENCES</span><b>✳</b><span>DIGITAL INNOVATION</span><b>✳</b><span>SMART SOLUTIONS</span><b>✳</b>
+    </div></section>
+
+    <section class="section-wrap section-pad" id="services">
+      <div class="section-heading">
+        <div><div class="eyebrow">01 / WHAT WE DO</div><h2>Technology that<br><span class="muted">moves you forward.</span></h2></div>
+        <p>From the first sketch to the finished product, we focus on useful technology that solves real problems.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card"><div class="service-number">01</div><div class="service-icon">⌘</div><h3>Software Development</h3><p>Purpose-built applications and digital tools shaped around the way people and businesses work.</p><a href="#contact" class="card-link">Discuss a solution <span>↗</span></a></article>
+        <article class="service-card featured"><div class="service-number">02</div><div class="service-icon">◈</div><h3>Website Development</h3><p>Fast, responsive and memorable websites that communicate clearly and help brands grow online.</p><a href="#contact" class="card-link">Build your website <span>↗</span></a></article>
+        <article class="service-card"><div class="service-number">03</div><div class="service-icon">✳</div><h3>AI & Automation</h3><p>Smarter workflows, helpful chatbots and automation concepts that reduce repetitive work.</p><a href="#contact" class="card-link">Explore automation <span>↗</span></a></article>
+        <article class="service-card"><div class="service-number">04</div><div class="service-icon">⌁</div><h3>Digital Consulting</h3><p>Practical guidance to help turn a technology challenge or early-stage idea into a clear plan.</p><a href="#contact" class="card-link">Shape an idea <span>↗</span></a></article>
+      </div>
+    </section>
+
+    <section class="about-section" id="about"><div class="section-wrap about-layout">
+      <div class="about-art"><div class="grid-glow"></div><div class="big-v">V<span>.</span></div><div class="art-label">THINK / CREATE / EVOLVE</div></div>
+      <div class="about-copy"><div class="eyebrow">02 / WHO WE ARE</div><h2>Curious minds.<br><span class="gradient-text">Bold solutions.</span></h2>
+        <p>Victec is a technology and software development company built around a simple belief: technology should make life and work better.</p>
+        <p>We bring creative thinking and a practical mindset to every project — whether it starts as a business challenge, a rough idea or a big ambition.</p>
+        <div class="values"><div><b>01</b><span>Think clearly</span></div><div><b>02</b><span>Build thoughtfully</span></div><div><b>03</b><span>Keep improving</span></div></div>
+      </div>
+    </div></section>
+
+    <section class="section-wrap section-pad" id="work">
+      <div class="section-heading"><div><div class="eyebrow">03 / HOW WE WORK</div><h2>Good work starts<br><span class="muted">with a clear process.</span></h2></div><p>Every successful project needs more than code. It needs a shared goal, a considered plan and attention to detail.</p></div>
+      <div class="process">
+        <div class="process-step"><span>01</span><h3>Discover</h3><p>We learn about your goals, users and the problem you want to solve.</p></div>
+        <div class="process-step"><span>02</span><h3>Plan</h3><p>We shape the idea into a focused scope and a practical direction.</p></div>
+        <div class="process-step"><span>03</span><h3>Create</h3><p>We design and develop with usability, quality and performance in mind.</p></div>
+        <div class="process-step"><span>04</span><h3>Improve</h3><p>We refine the result and help you plan the next step.</p></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact"><div class="section-wrap contact-inner">
+      <div><div class="eyebrow">04 / HAVE A PROJECT IN MIND?</div><h2>Let's make<br><span class="gradient-text">something matter.</span></h2><p>Tell us what you're working on. Let's explore how technology can help move it forward.</p></div>
+      <div class="contact-panel"><div class="contact-panel-top"><span class="status-dot"></span> OPEN FOR PROJECT ENQUIRIES</div><h3>Start a conversation</h3><p>Reach Victec on WhatsApp to discuss your idea, ask a question or request a project quote.</p>
+        <a class="button button-primary whatsapp-link" href="#" target="_blank" rel="noopener">Chat on WhatsApp <span>↗</span></a>
+        <small class="setup-note">WhatsApp contact number needs to be added in <code>script.js</code>.</small>
+      </div>
+    </div></section>
+  </main>
+
+  <footer class="footer"><div class="section-wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">V</span><span>VIC<span class="accent">TEC</span><i>.</i></span></a><span>Technology. Built for what's next.</span><span>© <span id="year"></span> Victec. All rights reserved.</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
